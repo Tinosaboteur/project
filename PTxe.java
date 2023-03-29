@@ -1,7 +1,5 @@
 package KhoPhuTungXeMay;
 
-import java.lang.constant.DirectMethodHandleDesc.Kind;
-import java.lang.reflect.Constructor;
 
 public class PTxe {
     

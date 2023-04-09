@@ -3,25 +3,21 @@ import java.util.Objects;
 
 public class xecontay extends PTxe implements Comparable<xecontay>{
     
+    public xecontay(String kind, String code, String brand, double price, int inPutDay, int inputmonth, int inputyear,
+            int outputday, int outputmonth, int outputyear) {
+        super(kind, code, brand, price, inPutDay, inputmonth, inputyear, outputday, outputmonth, outputyear);
+    }
+
     public xecontay(){}
 
     public xecontay(String code) {
         super(code);
     }
-
-    public xecontay(String kind, String code, String brand, double price, String inPutDay, String outPutDay) {
-        super(kind, code, brand, price, inPutDay, outPutDay);
-    }
-
-    @Override
-    public void RangeOfVehicle() {
-        System.out.println("\nDanh cho xe con tay");
-    }
-
+    
     @Override
     public String toString() {
         return "------INFO.PT.XECONTAY-----\nPhu tung " + Kind.toUpperCase() + " danh cho xe " + Brand.toUpperCase()
-                + "\nMa SP:" + Code.toUpperCase() + "\nNgay nhap kho:" + InPutDay + "\nNgay xuat kho:" + OutPutDay
+                + "\nMa SP:" + Code.toUpperCase() + "\nNgay nhap kho:" + InPutDay +"/"+ Inputmonth+"/"+ Inputyear + "\nNgay xuat kho:" + Outputday+"/"+ Outputmonth+"/"+ Outputyear
                 + "\nGia: " + Price;
     }
 
@@ -30,10 +26,6 @@ public class xecontay extends PTxe implements Comparable<xecontay>{
         return this.Kind.compareTo(o.Code);
     }
 
-    public int hashCode() {
-        return Objects.hash(Kind, Code , Brand , Price , InPutDay , OutPutDay);
-    }
-    
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
